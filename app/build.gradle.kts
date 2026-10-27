@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("org.jetbrains.kotlin.plugin.serialization")
 }
 
 android {
@@ -56,4 +57,16 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation("io.insert-koin:koin-core:3.4.3")
+    implementation("io.insert-koin:koin-android:3.4.3")
+    implementation("io.insert-koin:koin-androidx-compose:3.4.6")
+
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
+    implementation("com.squareup.okhttp3:okhttp:4.11.0")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 }
